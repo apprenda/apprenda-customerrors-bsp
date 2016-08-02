@@ -18,3 +18,11 @@ C:\code\clientservices\CustomErrorsBSP\source\Apprenda.CustomErrors.BSP\Apprenda
 C:\code\clientservices\CustomErrorsBSP\source\Apprenda.CustomErrors.BSP\Apprenda.CustomErrors.BSP\obj\Debug\Apprenda.CustomErrors.BSP.csprojResolveAssemblyReference.cache
 C:\code\clientservices\CustomErrorsBSP\source\Apprenda.CustomErrors.BSP\Apprenda.CustomErrors.BSP\obj\Debug\Apprenda.CustomErrors.BSP.dll
 C:\code\clientservices\CustomErrorsBSP\source\Apprenda.CustomErrors.BSP\Apprenda.CustomErrors.BSP\obj\Debug\Apprenda.CustomErrors.BSP.pdb
+C:\code\apprenda-customerrors-bsp\src\Apprenda.CustomErrors.BSP\obj\Debug\Apprenda.CustomErrors.BSP.csprojResolveAssemblyReference.cache
+C:\code\apprenda-customerrors-bsp\src\Apprenda.CustomErrors.BSP\obj\Debug\Apprenda.CustomErrors.BSP.dll
+C:\code\apprenda-customerrors-bsp\src\Apprenda.CustomErrors.BSP\obj\Debug\Apprenda.CustomErrors.BSP.pdb
+C:\code\apprenda-customerrors-bsp\src\Apprenda.CustomErrors.BSP\bin\Debug\Apprenda.CustomErrors.BSP.dll
+C:\code\apprenda-customerrors-bsp\src\Apprenda.CustomErrors.BSP\bin\Debug\Apprenda.CustomErrors.BSP.pdb
+C:\code\apprenda-customerrors-bsp\src\Apprenda.CustomErrors.BSP\bin\Debug\Apprenda.API.Extension.dll
+C:\code\apprenda-customerrors-bsp\src\Apprenda.CustomErrors.BSP\bin\Debug\Apprenda.Utils.dll
+C:\code\apprenda-customerrors-bsp\src\Apprenda.CustomErrors.BSP\bin\Debug\SaaSGrid.API.dll

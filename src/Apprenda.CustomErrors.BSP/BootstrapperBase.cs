@@ -16,7 +16,7 @@ namespace Apprenda.CustomErrors.BSP
     {
         public override API.Extension.Bootstrapping.BootstrappingResult Bootstrap(API.Extension.Bootstrapping.BootstrappingRequest bootstrappingRequest)
         {
-            //Only modify .NET Websites Components that do no belong to the Apprenda Team
+            //Only modify .NET Websites Components that do not belong to the Apprenda Team
             if (bootstrappingRequest.ComponentType == ComponentType.AspNet && bootstrappingRequest.DevelopmentTeamAlias != "apprenda")
             {
                 return ModifyConfigFiles(bootstrappingRequest);
@@ -50,15 +50,16 @@ namespace Apprenda.CustomErrors.BSP
 
             try
             {
+                //Traverse the web.config file and find the required section
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.Load(filePath);
                 XmlNode appsettingsNode = xmlDoc.SelectSingleNode("//system.web");
 
                 XmlElement customErrors = (XmlElement)xmlDoc.SelectSingleNode("//system.web/customErrors");
 
+                //If there is no custom errors setting defined, add it and save the modifed configuration file
                 if (null == customErrors && appsettingsNode != null)
                 {
-
                     XmlNode newElement = xmlDoc.CreateNode(XmlNodeType.Element, "customErrors", null);
                     XmlAttribute attribute1 = xmlDoc.CreateAttribute("mode");
                     attribute1.Value = "off";
@@ -67,6 +68,7 @@ namespace Apprenda.CustomErrors.BSP
                     xmlDoc.Save(filePath);
                     return BootstrappingResult.Success();
                 }
+                //If there is a custom errors setting configuration, overwrite it and set it to off
                 else if (null != customErrors && appsettingsNode != null)
                 {
                     customErrors.Attributes["mode"].Value = "off";
