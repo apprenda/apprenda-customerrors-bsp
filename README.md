@@ -11,5 +11,5 @@ Bootstrap Policy that sets the custom errors setting mode=off in Windows based .
 *NOTE*: This BSP only applies to Windows components of type website
 
 #Additional Notes:
-* The BSP has built and tested using VS 2013 and the 6.5.1 version of the Apprenda SDK and Cloud Platform
-* A built version of the BSP is available for download as part of this repository
+* The BSP was built and tested using VS 2013 and the 6.5.1 version of the Apprenda SDK and Cloud Platform.
+* A built and packaged version of the BSP is available for download as part of this repository.
