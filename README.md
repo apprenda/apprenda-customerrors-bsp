@@ -1,7 +1,7 @@
 # Apprenda Custom Errors BSP
 Bootstrap Policy that sets the custom errors setting mode=off in Windows based .NET Web Applications.
 
-#Buidling from Source
+#Building from Source
 1. Clone the repository
 2. Open the Solution with Visual Studio
 3. Build the Solution
