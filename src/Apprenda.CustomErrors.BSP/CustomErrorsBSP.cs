@@ -1,23 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Apprenda.API.Extension;
 using Apprenda.API.Extension.Bootstrapping;
 using System.IO;
 using System.Xml;
-using System.Web.Configuration;
-using System.Configuration;
 
-namespace Apprenda.CustomErrors.BSP
+namespace Apprenda.BSP
 {
-    public class BootstrapperBase : Apprenda.API.Extension.Bootstrapping.BootstrapperBase
+    public class CustomErrorsBSP : BootstrapperBase
     {
-        public override API.Extension.Bootstrapping.BootstrappingResult Bootstrap(API.Extension.Bootstrapping.BootstrappingRequest bootstrappingRequest)
+        public override BootstrappingResult Bootstrap(BootstrappingRequest bootstrappingRequest)
         {
             //Only modify .NET Websites Components that do not belong to the Apprenda Team
-            if (bootstrappingRequest.ComponentType == ComponentType.AspNet && bootstrappingRequest.DevelopmentTeamAlias != "apprenda")
+            if (bootstrappingRequest.ComponentType == ComponentType.AspNet && 
+                !bootstrappingRequest.DevelopmentTeamAlias.Equals("apprenda", StringComparison.InvariantCultureIgnoreCase))
             {
                 return ModifyConfigFiles(bootstrappingRequest);
             }
@@ -79,7 +73,14 @@ namespace Apprenda.CustomErrors.BSP
             }
             catch (Exception ex)
             {
-                return BootstrappingResult.Failure(new[] { ex.InnerException.Message });  
+                if (ex.InnerException != null)
+                {
+                    return BootstrappingResult.Failure(new[] { ex.InnerException.Message });
+                }
+                else
+                {
+                    return BootstrappingResult.Failure(new[] { ex.Message });
+                }
             }
             
         }
